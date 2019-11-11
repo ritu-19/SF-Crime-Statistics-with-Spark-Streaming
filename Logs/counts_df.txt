@@ -1,0 +1,169 @@
+root
+ |-- key: binary (nullable = true)
+ |-- value: binary (nullable = true)
+ |-- topic: string (nullable = true)
+ |-- partition: integer (nullable = true)
+ |-- offset: long (nullable = true)
+ |-- timestamp: timestamp (nullable = true)
+ |-- timestampType: integer (nullable = true)
+
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++------------------------+------+-----+
+|original_crime_type_name|window|count|
++------------------------+------+-----+
++------------------------+------+-----+
+
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:40:54.403Z', 'batchId': 1, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 15, 'triggerExecution': 17}, 'eventTime': {'watermark': '1970-01-01T00:00:00.000Z'}, 'stateOperators': [{'numRowsTotal': 0, 'numRowsUpdated': 0, 'memoryUsedBytes': 41399, 'customMetrics': {'loadedMapCacheHitCount': 0, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 12599}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 184}}, 'endOffset': {'demo': {'0': 184}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:40:54.403Z', 'batchId': 1, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 15, 'triggerExecution': 17}, 'eventTime': {'watermark': '1970-01-01T00:00:00.000Z'}, 'stateOperators': [{'numRowsTotal': 0, 'numRowsUpdated': 0, 'memoryUsedBytes': 41399, 'customMetrics': {'loadedMapCacheHitCount': 0, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 12599}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 184}}, 'endOffset': {'demo': {'0': 184}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++------------------------+------------------------------------------+-----+
+|original_crime_type_name|window                                    |count|
++------------------------+------------------------------------------+-----+
+|Traffic Stop            |[2018-12-31 23:30:00, 2019-01-01 00:30:00]|1    |
+|Passing Call            |[2018-12-31 23:30:00, 2019-01-01 00:30:00]|1    |
+|Traf Violation Cite     |[2018-12-31 23:30:00, 2019-01-01 00:30:00]|1    |
++------------------------+------------------------------------------+-----+
+
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:40:55.163Z', 'batchId': 1, 'numInputRows': 3, 'inputRowsPerSecond': 115.38461538461539, 'processedRowsPerSecond': 0.8289582757667864, 'durationMs': {'addBatch': 3462, 'getBatch': 0, 'getEndOffset': 0, 'queryPlanning': 46, 'setOffsetRange': 15, 'triggerExecution': 3619, 'walCommit': 57}, 'eventTime': {'avg': '2018-12-31T18:23:20.000Z', 'max': '2018-12-31T18:27:00.000Z', 'min': '2018-12-31T18:19:00.000Z', 'watermark': '1970-01-01T00:00:00.000Z'}, 'stateOperators': [{'numRowsTotal': 3, 'numRowsUpdated': 3, 'memoryUsedBytes': 75679, 'customMetrics': {'loadedMapCacheHitCount': 400, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 18079}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 184}}, 'endOffset': {'demo': {'0': 187}}, 'numInputRows': 3, 'inputRowsPerSecond': 115.38461538461539, 'processedRowsPerSecond': 0.8289582757667864}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++------------------------+------+-----+
+|original_crime_type_name|window|count|
++------------------------+------+-----+
++------------------------+------+-----+
+
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:40:55.163Z', 'batchId': 1, 'numInputRows': 3, 'inputRowsPerSecond': 115.38461538461539, 'processedRowsPerSecond': 0.8289582757667864, 'durationMs': {'addBatch': 3462, 'getBatch': 0, 'getEndOffset': 0, 'queryPlanning': 46, 'setOffsetRange': 15, 'triggerExecution': 3619, 'walCommit': 57}, 'eventTime': {'avg': '2018-12-31T18:23:20.000Z', 'max': '2018-12-31T18:27:00.000Z', 'min': '2018-12-31T18:19:00.000Z', 'watermark': '1970-01-01T00:00:00.000Z'}, 'stateOperators': [{'numRowsTotal': 3, 'numRowsUpdated': 3, 'memoryUsedBytes': 75679, 'customMetrics': {'loadedMapCacheHitCount': 400, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 18079}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 184}}, 'endOffset': {'demo': {'0': 187}}, 'numInputRows': 3, 'inputRowsPerSecond': 115.38461538461539, 'processedRowsPerSecond': 0.8289582757667864}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:40:58.783Z', 'batchId': 2, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'addBatch': 3259, 'getBatch': 1, 'getEndOffset': 0, 'queryPlanning': 36, 'setOffsetRange': 13, 'triggerExecution': 3386, 'walCommit': 38}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 3, 'numRowsUpdated': 0, 'memoryUsedBytes': 80575, 'customMetrics': {'loadedMapCacheHitCount': 800, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 18079}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 187}}, 'endOffset': {'demo': {'0': 187}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:40:58.783Z', 'batchId': 2, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'addBatch': 3259, 'getBatch': 1, 'getEndOffset': 0, 'queryPlanning': 36, 'setOffsetRange': 13, 'triggerExecution': 3386, 'walCommit': 38}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 3, 'numRowsUpdated': 0, 'memoryUsedBytes': 80575, 'customMetrics': {'loadedMapCacheHitCount': 800, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 18079}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 187}}, 'endOffset': {'demo': {'0': 187}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++------------------------+------------------------------------------+-----+
+|original_crime_type_name|window                                    |count|
++------------------------+------------------------------------------+-----+
+|Traffic Stop            |[2018-12-31 23:30:00, 2019-01-01 00:30:00]|4    |
+|Passing Call            |[2018-12-31 23:30:00, 2019-01-01 00:30:00]|2    |
+|Audible Alarm           |[2018-12-31 23:30:00, 2019-01-01 00:30:00]|1    |
++------------------------+------------------------------------------+-----+
+
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:06.272Z', 'batchId': 4, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 11, 'triggerExecution': 11}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 4, 'numRowsUpdated': 0, 'memoryUsedBytes': 80943, 'customMetrics': {'loadedMapCacheHitCount': 1200, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 18303}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 192}}, 'endOffset': {'demo': {'0': 192}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:06.272Z', 'batchId': 4, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 11, 'triggerExecution': 11}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 4, 'numRowsUpdated': 0, 'memoryUsedBytes': 80943, 'customMetrics': {'loadedMapCacheHitCount': 1200, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 18303}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 192}}, 'endOffset': {'demo': {'0': 192}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++------------------------+------------------------------------------+-----+
+|original_crime_type_name|window                                    |count|
++------------------------+------------------------------------------+-----+
+|Traffic Stop            |[2018-12-31 23:30:00, 2019-01-01 00:30:00]|6    |
+|Passing Call            |[2018-12-31 23:30:00, 2019-01-01 00:30:00]|5    |
+|Fight No Weapon         |[2018-12-31 23:30:00, 2019-01-01 00:30:00]|1    |
+|Auto Boost / Strip      |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Att                     |[2018-12-31 23:30:00, 2019-01-01 00:30:00]|1    |
++------------------------+------------------------------------------+-----+
+
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:11.366Z', 'batchId': 5, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 12, 'triggerExecution': 12}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 7, 'numRowsUpdated': 0, 'memoryUsedBytes': 81647, 'customMetrics': {'loadedMapCacheHitCount': 1600, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 18975}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 200}}, 'endOffset': {'demo': {'0': 200}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:11.366Z', 'batchId': 5, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 12, 'triggerExecution': 12}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 7, 'numRowsUpdated': 0, 'memoryUsedBytes': 81647, 'customMetrics': {'loadedMapCacheHitCount': 1600, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 18975}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 200}}, 'endOffset': {'demo': {'0': 200}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++------------------------+------------------------------------------+-----+
+|original_crime_type_name|window                                    |count|
++------------------------+------------------------------------------+-----+
+|Audible Alarm           |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Suspicious Vehicle      |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Traffic Stop            |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Passing Call            |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|2    |
++------------------------+------------------------------------------+-----+
+
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:18.793Z', 'batchId': 6, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 11, 'triggerExecution': 11}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 11, 'numRowsUpdated': 0, 'memoryUsedBytes': 82503, 'customMetrics': {'loadedMapCacheHitCount': 2000, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 19879}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 205}}, 'endOffset': {'demo': {'0': 205}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:18.793Z', 'batchId': 6, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 11, 'triggerExecution': 11}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 11, 'numRowsUpdated': 0, 'memoryUsedBytes': 82503, 'customMetrics': {'loadedMapCacheHitCount': 2000, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 19879}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 205}}, 'endOffset': {'demo': {'0': 205}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++------------------------+------------------------------------------+-----+
+|original_crime_type_name|window                                    |count|
++------------------------+------------------------------------------+-----+
+|Drunk Driver            |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Audible Alarm           |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|2    |
+|Assault / Battery       |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Poss                    |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Passing Call            |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|5    |
++------------------------+------------------------------------------+-----+
+
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:23.844Z', 'batchId': 7, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 12, 'triggerExecution': 12}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 14, 'numRowsUpdated': 0, 'memoryUsedBytes': 83447, 'customMetrics': {'loadedMapCacheHitCount': 2400, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 20551}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 212}}, 'endOffset': {'demo': {'0': 212}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:23.844Z', 'batchId': 7, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 12, 'triggerExecution': 12}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 14, 'numRowsUpdated': 0, 'memoryUsedBytes': 83447, 'customMetrics': {'loadedMapCacheHitCount': 2400, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 20551}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 212}}, 'endOffset': {'demo': {'0': 212}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+-------------------------------------------
+Batch: 7
+-------------------------------------------
++------------------------+------------------------------------------+-----+
+|original_crime_type_name|window                                    |count|
++------------------------+------------------------------------------+-----+
+|Assault / Battery       |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|2    |
+|Traffic Stop            |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|2    |
+|Strongarm Robbery       |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Suspicious Person       |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Passing Call            |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|6    |
++------------------------+------------------------------------------+-----+
+
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:29.576Z', 'batchId': 8, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 11, 'triggerExecution': 11}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 16, 'numRowsUpdated': 0, 'memoryUsedBytes': 84079, 'customMetrics': {'loadedMapCacheHitCount': 2800, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 21015}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 217}}, 'endOffset': {'demo': {'0': 217}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:29.576Z', 'batchId': 8, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 11, 'triggerExecution': 11}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 16, 'numRowsUpdated': 0, 'memoryUsedBytes': 84079, 'customMetrics': {'loadedMapCacheHitCount': 2800, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 21015}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 217}}, 'endOffset': {'demo': {'0': 217}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+-------------------------------------------
+Batch: 8
+-------------------------------------------
++------------------------+------------------------------------------+-----+
+|original_crime_type_name|window                                    |count|
++------------------------+------------------------------------------+-----+
+|Traffic Stop            |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|3    |
+|Noise Nuisance          |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Passing Call            |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|10   |
++------------------------+------------------------------------------+-----+
+
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:34.547Z', 'batchId': 9, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 1, 'setOffsetRange': 11, 'triggerExecution': 12}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 17, 'numRowsUpdated': 0, 'memoryUsedBytes': 84295, 'customMetrics': {'loadedMapCacheHitCount': 3200, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 21239}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 223}}, 'endOffset': {'demo': {'0': 223}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+-------------------------------------------
+Batch: 9
+-------------------------------------------
++------------------------+------------------------------------------+-----+
+|original_crime_type_name|window                                    |count|
++------------------------+------------------------------------------+-----+
+|Traf Violation Tow      |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Fire                    |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|H&r Injury Accident     |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Traffic Stop            |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|4    |
+|Fireworks               |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
++------------------------+------------------------------------------+-----+
+
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:43.115Z', 'batchId': 10, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 12, 'triggerExecution': 12}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 21, 'numRowsUpdated': 0, 'memoryUsedBytes': 85159, 'customMetrics': {'loadedMapCacheHitCount': 3600, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 22143}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 228}}, 'endOffset': {'demo': {'0': 228}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:43.115Z', 'batchId': 10, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 12, 'triggerExecution': 12}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 21, 'numRowsUpdated': 0, 'memoryUsedBytes': 85159, 'customMetrics': {'loadedMapCacheHitCount': 3600, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 22143}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 228}}, 'endOffset': {'demo': {'0': 228}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+-------------------------------------------
+Batch: 10
+-------------------------------------------
++------------------------+------------------------------------------+-----+
+|original_crime_type_name|window                                    |count|
++------------------------+------------------------------------------+-----+
+|Audible Alarm           |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|3    |
+|Suspicious Vehicle      |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|2    |
+|Fight No Weapon         |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|1    |
+|Traffic Stop            |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|7    |
+|Passing Call            |[2018-12-31 22:30:00, 2018-12-31 23:30:00]|12   |
++------------------------+------------------------------------------+-----+
+
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:48.065Z', 'batchId': 11, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 11, 'triggerExecution': 11}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 22, 'numRowsUpdated': 0, 'memoryUsedBytes': 85727, 'customMetrics': {'loadedMapCacheHitCount': 4000, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 22367}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 236}}, 'endOffset': {'demo': {'0': 236}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}
+Traceback (most recent call last):
+  File "/Users/samarth.varshney/Downloads/sf-crime-stats-project-files/data_stream.py", line 143, in <module>
+    run_spark_job(spark)
+  File "/Users/samarth.varshney/Downloads/sf-crime-stats-project-files/data_stream.py", line 109, in run_spark_job
+    spark.streams.awaitAnyTermination()
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/streaming.py", line 265, in awaitAnyTermination
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1255, in __call__
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 985, in send_command
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1152, in send_command
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py", line 270, in signal_handler
+KeyboardInterrupt
+{'id': '98e27ec4-8857-4372-b917-9d50381d3fb0', 'runId': 'adcd9db9-862f-4445-9664-15c74944fdd9', 'name': None, 'timestamp': '2019-11-11T03:41:48.065Z', 'batchId': 11, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 11, 'triggerExecution': 11}, 'eventTime': {'watermark': '2018-12-31T18:26:00.000Z'}, 'stateOperators': [{'numRowsTotal': 22, 'numRowsUpdated': 0, 'memoryUsedBytes': 85727, 'customMetrics': {'loadedMapCacheHitCount': 4000, 'loadedMapCacheMissCount': 0, 'stateOnCurrentVersionSizeBytes': 22367}}], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 236}}, 'endOffset': {'demo': {'0': 236}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@62d6c4f8'}}

@@ -1,0 +1,101 @@
+root
+ |-- key: binary (nullable = true)
+ |-- value: binary (nullable = true)
+ |-- topic: string (nullable = true)
+ |-- partition: integer (nullable = true)
+ |-- offset: long (nullable = true)
+ |-- timestamp: timestamp (nullable = true)
+ |-- timestampType: integer (nullable = true)
+
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++--------+------------------------+-------------+-------+-----------+----------+
+|crime_id|original_crime_type_name|call_datetime|address|disposition|YYYYmmDDhh|
++--------+------------------------+-------------+-------+-----------+----------+
++--------+------------------------+-------------+-------+-----------+----------+
+
+{'id': '8d569025-8821-42e5-9b2d-edbbce6f7fa3', 'runId': '374f06e5-6359-4aa5-a67f-7bfabe45a4f8', 'name': None, 'timestamp': '2019-11-11T03:35:54.863Z', 'batchId': 0, 'numInputRows': 0, 'processedRowsPerSecond': 0.0, 'durationMs': {'addBatch': 678, 'getBatch': 9, 'getEndOffset': 0, 'queryPlanning': 325, 'setOffsetRange': 398, 'triggerExecution': 1523, 'walCommit': 50}, 'stateOperators': [], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': None, 'endOffset': {'demo': {'0': 121}}, 'numInputRows': 0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@539ebb57'}}
+{'id': '8d569025-8821-42e5-9b2d-edbbce6f7fa3', 'runId': '374f06e5-6359-4aa5-a67f-7bfabe45a4f8', 'name': None, 'timestamp': '2019-11-11T03:35:56.398Z', 'batchId': 1, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 645, 'triggerExecution': 646}, 'stateOperators': [], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 121}}, 'endOffset': {'demo': {'0': 121}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@539ebb57'}}
+{'id': '8d569025-8821-42e5-9b2d-edbbce6f7fa3', 'runId': '374f06e5-6359-4aa5-a67f-7bfabe45a4f8', 'name': None, 'timestamp': '2019-11-11T03:35:56.398Z', 'batchId': 1, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 645, 'triggerExecution': 646}, 'stateOperators': [], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 121}}, 'endOffset': {'demo': {'0': 121}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@539ebb57'}}
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++---------+------------------------+-------------------+----------------------+-----------+----------+
+|crime_id |original_crime_type_name|call_datetime      |address               |disposition|YYYYmmDDhh|
++---------+------------------------+-------------------+----------------------+-----------+----------+
+|183653763|Traffic Stop            |2018-12-31 23:57:00|Geary Bl/divisadero St|ADM        |2018123123|
+|183653756|Traf Violation Cite     |2018-12-31 23:54:00|100 Blk Howard St     |CIT        |2018123123|
+|183653746|Passing Call            |2018-12-31 23:49:00|3300 Block Of 20th Av |HAN        |2018123123|
+|183653745|Audible Alarm           |2018-12-31 23:47:00|1900 Block Of 18th Av |PAS        |2018123123|
++---------+------------------------+-------------------+----------------------+-----------+----------+
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++---------+------------------------+-------------------+-----------------------+------------+----------+
+|crime_id |original_crime_type_name|call_datetime      |address                |disposition |YYYYmmDDhh|
++---------+------------------------+-------------------+-----------------------+------------+----------+
+|183653737|Traffic Stop            |2018-12-31 23:46:00|Sansome St/chestnut St |CIT         |2018123123|
+|183653719|Passing Call            |2018-12-31 23:38:00|Haight St/fillmore St  |ND          |2018123123|
+|183653722|Traffic Stop            |2018-12-31 23:38:00|Geary Bl/parker Av     |CIT         |2018123123|
+|183653711|Traffic Stop            |2018-12-31 23:36:00|Battery St/union St    |HAN         |2018123123|
+|183653706|Passing Call            |2018-12-31 23:34:00|1500 Block Of Haight St|Not recorded|2018123123|
++---------+------------------------+-------------------+-----------------------+------------+----------+
+
+{'id': '8d569025-8821-42e5-9b2d-edbbce6f7fa3', 'runId': '374f06e5-6359-4aa5-a67f-7bfabe45a4f8', 'name': None, 'timestamp': '2019-11-11T03:36:09.447Z', 'batchId': 3, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 11, 'triggerExecution': 11}, 'stateOperators': [], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 130}}, 'endOffset': {'demo': {'0': 130}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@539ebb57'}}
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++---------+------------------------+-------------------+------------------------+-----------+----------+
+|crime_id |original_crime_type_name|call_datetime      |address                 |disposition|YYYYmmDDhh|
++---------+------------------------+-------------------+------------------------+-----------+----------+
+|183653717|Fight No Weapon         |2018-12-31 23:33:00|5th St/minna St         |GOA        |2018123123|
+|183653702|Traffic Stop            |2018-12-31 23:33:00|Front St/green St       |HAN        |2018123123|
+|183653703|Passing Call            |2018-12-31 23:33:00|3100 Block Of Mission St|HAN        |2018123123|
+|183653700|Passing Call            |2018-12-31 23:33:00|3100 Block Of Mission St|HAN        |2018123123|
+|183653693|Traffic Stop            |2018-12-31 23:30:00|Funston Av/cabrillo St  |CIT        |2018123123|
++---------+------------------------+-------------------+------------------------+-----------+----------+
+
+{'id': '8d569025-8821-42e5-9b2d-edbbce6f7fa3', 'runId': '374f06e5-6359-4aa5-a67f-7bfabe45a4f8', 'name': None, 'timestamp': '2019-11-11T03:36:14.206Z', 'batchId': 4, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 10, 'triggerExecution': 10}, 'stateOperators': [], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 135}}, 'endOffset': {'demo': {'0': 135}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@539ebb57'}}
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++---------+------------------------+-------------------+-----------------------+-----------+----------+
+|crime_id |original_crime_type_name|call_datetime      |address                |disposition|YYYYmmDDhh|
++---------+------------------------+-------------------+-----------------------+-----------+----------+
+|183653696|Att                     |2018-12-31 23:30:00|4000 Block Of 18th St  |REP        |2018123123|
+|183653688|Auto Boost / Strip      |2018-12-31 23:29:00|Bryant St/4th St       |REP        |2018123123|
+|183653689|Passing Call            |2018-12-31 23:29:00|Geary St/jones St      |HAN        |2018123123|
+|183653687|Traffic Stop            |2018-12-31 23:28:00|5th St/jessie St       |ADV        |2018123123|
+|183653674|Passing Call            |2018-12-31 23:25:00|600 Block Of Dolores St|HAN        |2018123123|
++---------+------------------------+-------------------+-----------------------+-----------+----------+
+
+{'id': '8d569025-8821-42e5-9b2d-edbbce6f7fa3', 'runId': '374f06e5-6359-4aa5-a67f-7bfabe45a4f8', 'name': None, 'timestamp': '2019-11-11T03:36:19.558Z', 'batchId': 5, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0, 'durationMs': {'getEndOffset': 0, 'setOffsetRange': 10, 'triggerExecution': 10}, 'stateOperators': [], 'sources': [{'description': 'KafkaV2[Subscribe[demo]]', 'startOffset': {'demo': {'0': 140}}, 'endOffset': {'demo': {'0': 140}}, 'numInputRows': 0, 'inputRowsPerSecond': 0.0, 'processedRowsPerSecond': 0.0}], 'sink': {'description': 'org.apache.spark.sql.execution.streaming.ConsoleSinkProvider@539ebb57'}}
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++---------+------------------------+-------------------+-------------------------------+-----------+----------+
+|crime_id |original_crime_type_name|call_datetime      |address                        |disposition|YYYYmmDDhh|
++---------+------------------------+-------------------+-------------------------------+-----------+----------+
+|183653667|Suspicious Vehicle      |2018-12-31 23:24:00|1600 Block Of Haight St        |ADV        |2018123123|
+|183653672|Audible Alarm           |2018-12-31 23:24:00|100 Block Of Columbia Square St|PAS        |2018123123|
+|183653664|Assault / Battery       |2018-12-31 23:21:00|500 Block Of Jackson St        |ABA        |2018123123|
+|183653661|Audible Alarm           |2018-12-31 23:21:00|4000 Block Of 18th St          |CAN        |2018123123|
+|183653655|Passing Call            |2018-12-31 23:21:00|Mission St/precita Av          |HAN        |2018123123|
+|183653665|Drunk Driver            |2018-12-31 23:20:00|Balboa St/41st Av              |ADV        |2018123123|
++---------+------------------------+-------------------+-------------------------------+-----------+----------+
+
+Traceback (most recent call last):
+  File "/Users/samarth.varshney/Downloads/sf-crime-stats-project-files/data_stream.py", line 143, in <module>
+    run_spark_job(spark)
+  File "/Users/samarth.varshney/Downloads/sf-crime-stats-project-files/data_stream.py", line 109, in run_spark_job
+    spark.streams.awaitAnyTermination()
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/streaming.py", line 265, in awaitAnyTermination
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1255, in __call__
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 985, in send_command
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1152, in send_command
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/Users/samarth.varshney/anaconda2/envs/ud_1.0/lib/python3.7/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py", line 270, in signal_handler
+KeyboardInterrupt
